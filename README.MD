@@ -8,6 +8,18 @@ https://www.udemy.com/understand-nodejs/learn/v4/t/lecture/3509218?start=0
 https://www.udemy.com/understand-nodejs/learn/v4/t/lecture/3485580?start=375
 https://www.udemy.com/understand-nodejs/learn/v4/t/lecture/3560172?start=0
 
+if js file content
+  
+    var greet = function(){
+        console.log('Hello!');
+    };
+    
+    module.exports = greet;
+
+then wrapped into
+
+![alt text](https://raw.githubusercontent.com/PeaceUCR/NodeJSPractice/master/wrap.png)
+
 note: require('') involved cache to return.... the import module may not execute twice even you require twice, refer to **callModule.js**, and changes in previous require return will affect the next return, obj1 change will cause the obj2 change as well
 
 #Async Code and event loop
