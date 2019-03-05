@@ -30,6 +30,17 @@ JS is synchronous&single-threaded, NodeJS is async(libuv non-blocking/async I/O)
 https://www.udemy.com/understand-nodejs/learn/v4/t/lecture/3586868?start=0
 
 # Understand Event loop
+
+***Promise vs setTimeout()***
+
+https://stackoverflow.com/questions/38752620/promise-vs-settimeout?noredirect=1&lq=1
+
+https://stackoverflow.com/questions/46375711/what-is-the-relationship-between-event-loop-and-promise
+
+Promise.resolve schedule a microtask and the setTimeout schedule a macrotask. And the microtasks are executed before running the next macrotask.
+
+
+
 http://cek.io/blog/2015/12/03/event-loop/
 
 https://blog.risingstack.com/node-hero-async-programming-in-node-js/
