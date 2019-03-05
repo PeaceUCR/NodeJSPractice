@@ -39,7 +39,11 @@ https://stackoverflow.com/questions/46375711/what-is-the-relationship-between-ev
 
 Promise.resolve schedule a microtask and the setTimeout schedule a macrotask. And the microtasks are executed before running the next macrotask.
 
+****Mistakes when use promise?Chaning or Return in Promise?***
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#Common_mistakes
+
+-------------------------------------------------------------------------------------------
 
 http://cek.io/blog/2015/12/03/event-loop/
 
