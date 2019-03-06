@@ -43,6 +43,48 @@ Promise.resolve schedule a microtask and the setTimeout schedule a macrotask. An
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#Common_mistakes
 
+https://stackoverflow.com/questions/27715275/whats-the-difference-between-returning-value-or-promise-resolve-from-then
+
+**I am secondundefined**  
+
+    var a = new Promise((resolve, reject)=>{
+	      resolve(9);
+      });
+    a.then((s)=>{
+      console.log("I am first"+s);
+      Promise.resolve(s);
+    }).then((s)=>{
+      console.log("I am second"+s);
+    });
+    
+**VS**
+**I am second9**     
+    var a = new Promise((resolve, reject)=>{
+	      resolve(9);
+    });
+
+    a.then((s)=>{
+      console.log("I am first"+s);
+      return s;
+    }).then((s)=>{
+      console.log("I am second"+s);
+    });
+**VS**
+**I am second9**     
+    var a = new Promise((resolve, reject)=>{
+      resolve(9);
+    });
+
+    a.then((s)=>{
+      console.log("I am first"+s);
+      return Promise.resolve(s);
+    }).then((s)=>{
+      console.log("I am second"+s);
+    });
+    
+        
+        
+  
 -------------------------------------------------------------------------------------------
 
 http://cek.io/blog/2015/12/03/event-loop/
